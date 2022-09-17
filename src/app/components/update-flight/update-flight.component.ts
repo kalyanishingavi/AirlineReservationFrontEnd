@@ -21,7 +21,7 @@ export class UpdateFlightComponent implements OnInit {
   addFlights: AddFlights;
   myForm: FormGroup;
   message:any;
-  
+  staff: Flights
 
   constructor(private route: ActivatedRoute,private router: Router,
     private addflightsService: AddflightsService,private service:AddflightsService) { }
@@ -77,6 +77,15 @@ export class UpdateFlightComponent implements OnInit {
     },error=>alert("error"));
     
     
+  }
+
+  onEditDep(staff:Flights) {
+    this.myForm.controls['id'].setValue(staff.id);
+    this.myForm.controls['flightName'].setValue(staff.flightName);
+    this.myForm.controls['flightDate'].setValue(staff.flightDate);
+    this.myForm.controls['flightTime'].setValue(staff.flightTime);
+    this.myForm.controls['destination'].setValue(staff.destination);
+    this.myForm.controls['origin'].setValue(staff.origin);
   }
 
 

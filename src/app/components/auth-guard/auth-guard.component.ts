@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
+import { users } from 'src/app/models/userdata';
+import { AppService } from 'src/app/services/app.service';
 import { UserAuthService } from 'src/app/services/user-auth.service';
 
 @Component({
@@ -8,28 +11,42 @@ import { UserAuthService } from 'src/app/services/user-auth.service';
   templateUrl: './auth-guard.component.html',
   styleUrls: ['./auth-guard.component.css']
 })
-export class AuthGuardComponent implements CanActivate {
+export class AuthGuardComponent implements OnInit {
 
-  constructor(
-    private userAuthService: UserAuthService,
-    private router: Router
-  ) {}
+  loginForm: FormGroup;
+  users: any;
+  errorMsg: string;
 
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ):
-    | Observable<boolean | UrlTree>
-    | Promise<boolean | UrlTree>
-    | boolean
-    | UrlTree {
-    // console.log(this.userAuthService.getToken());
-    if (this.userAuthService.getToken() !== null) {
-      return true;
-    }
+  constructor(private router: Router, private appService:AppService) { }
 
-    this.router.navigate(['/login']);
-    return false;
+  ngOnInit(): void {
+    this.users =  users;
+    //this.users =this.appService.getAllUsers().subscribe(data=>this.users=data);
+    this.loginForm = new FormGroup({
+      username: new FormControl(''),
+      password: new FormControl('')
+    });
   }
+
+  onFormSubmit(){
+
+    let username = this.loginForm.value.username;
+    let password = this.loginForm.value.password;
+
+    let user = this.users.find(u=> (u.username === username && u.password === password));
+
+    if(user){
+      localStorage.setItem("isLoggedIn","true");
+      let token = btoa(username + ':' + password);
+      localStorage.setItem("token", token);
+      this.appService.loggedIn.next(true);
+      this.router.navigateByUrl('/allow');
+
+    }else{
+      this.errorMsg = "Invalid User";
+    }
+    
+  }
+
 
 }

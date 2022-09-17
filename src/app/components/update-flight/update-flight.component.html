@@ -2,7 +2,7 @@
 <section style="background-color: rgb(196, 255, 200);" >
     <div class="container col-md-6" style="text-align: center">
         <h1 style="color:rgb(4, 68, 9);">Add Flights</h1>
-    <form (submit)="userRegister()"[formGroup]='myForm'>
+    <form (submit)="onEditDep(staff)"[formGroup]='myForm'>
         <div class="mb-3">
             <label for="exampleFormControlInput" class="form-label">FlightName</label>
             <input type="text" class="form-control" id="firstName" name="firstName" formControlName="flightName">

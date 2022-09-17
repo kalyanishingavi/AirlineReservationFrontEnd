@@ -31,4 +31,6 @@ export class UserAuthService {
     // return this.getRoles() && this.getToken();
     return this.getToken();
   }
+
+  
 }

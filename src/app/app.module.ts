@@ -25,6 +25,8 @@ import { AddFlightsComponent } from './components/add-flights/add-flights.compon
 import { AdminSearchFlightsComponent } from './components/admin-search-flights/admin-search-flights.component';
 import { UpdateFlightComponent } from './components/update-flight/update-flight.component';
 import { AuthGuardComponent } from './components/auth-guard/auth-guard.component';
+import { AllowedAdminComponent } from './components/allowed-admin/allowed-admin.component';
+import { AlloweduserComponent } from './components/alloweduser/alloweduser.component';
 
 
 @NgModule({
@@ -46,6 +48,8 @@ import { AuthGuardComponent } from './components/auth-guard/auth-guard.component
     AdminSearchFlightsComponent,
     UpdateFlightComponent,
     AuthGuardComponent,
+    AllowedAdminComponent,
+    AlloweduserComponent,
     
     
   ],

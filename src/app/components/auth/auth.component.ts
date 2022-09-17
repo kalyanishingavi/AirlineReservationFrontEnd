@@ -38,7 +38,7 @@ export class AuthComponent implements OnInit {
       let token = btoa(username + ':' + password);
       localStorage.setItem("token", token);
       this.appService.loggedIn.next(true);
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/allowuser');
 
     }else{
       this.errorMsg = "Invalid User";

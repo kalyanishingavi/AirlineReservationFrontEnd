@@ -31,15 +31,15 @@
             <td>{{flight.businessClassFare}}</td>
             <td>{{flight.economyClassFare}}</td>
             <td><input type="button" value="Delete Flight" class="button" (click)="deleteFlight(flight.id)"></td>
-            <!--<td>
-                <button (click)="updateFlight(flight.id)" class="btn btn-info">Update</button>
-            </td>-->
             <td>
+                <button (click)="updateFlight(flight.id)" class="btn btn-info">Update</button>
+            </td>
+            <!--<td>
                 <button class="btn btn-success" type="button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" 
                         (click)="onEditDep(staff)"><mat-icon>edit</mat-icon></button>
-            </td>
+            </td>-->
         </tr>
     </table>
 </div>
 <br>
-
+<a href="http://localhost:4200/allow"><button  type="button" class="btn btn-success btn-lg btn-block" >Back To Dashboard</button></a>

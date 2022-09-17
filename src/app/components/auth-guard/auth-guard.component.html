@@ -1,1 +1,17 @@
 <p>auth-guard works!</p>
+<div class="col-sm-3" align="center" style="border: darkslategray;">
+    <section style="background-color: lightgreen;" >
+    <h1>Login</h1>
+    
+    <span *ngIf="errorMsg"> {{errorMsg}}</span>
+    <form (submit)="onFormSubmit()" [formGroup]="loginForm">
+        <label>Username: </label>
+        <input type="text" name="username" required formControlName="username">
+        <br/><br/>
+        <label>Password: </label>
+        <input type="password" name="password" required formControlName="password">
+        <br/><br/>
+        <a href="http://localhost:4200/allFlights"><button style="border: olivedrab;"><input type="submit" value="LOGIN" style="color: rgb(5, 78, 46);"></button></a>
+    </form>
+    </section>
+    </div>
