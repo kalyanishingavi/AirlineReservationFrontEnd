@@ -1,0 +1,124 @@
+
+<div class="container-fluid mt-3">
+    <div class="row">
+      <div class="col-md-6 offset-md-4">
+        <h1>CheckIn</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 offset-md-4">
+        <form [formGroup]="checkInForm">
+          <div class="form-group">
+            <label>Booking Id : </label>
+            <input
+              class="form-control"
+              type="number"
+              name="bookingId"
+              formControlName="bookingId"
+            />
+          </div>
+          
+          <button type="button" (click)="checkIn()" class="btn-block btn btn-success">
+            Check In
+          </button>
+        </form>
+      </div>
+  
+      <div class="col-md-4 offset-md-4 mt-4" *ngIf="bookingData">
+        <div class="card shadow">
+          <div class="card-body">
+            <h4>
+              <span>{{bookingData.firstName | titlecase}} {{bookingData.lastName | titlecase}}</span>
+            </h4>
+            <div>
+              <span>BookingId : {{bookingData.bookingId}}</span>
+            </div>
+            <div class="mt-2">
+              <span>Class : {{bookingData.classs}}</span>
+            </div>
+            <div class="mt-2">
+              <span>NoOfSeats : {{bookingData.noOfSeats}}</span>
+            </div>
+            <div class="mt-2">
+              <span>FlightId : {{bookingData.flightId}}</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="mt-3 text-success">
+          <strong>Check In Successful !!!</strong>
+        </div>
+      </div>
+  
+      
+    </div>
+  
+  </div>
+
+
+  <div class="container-fluid mt-3">
+    <div class="row">
+      <div class="col-md-6 offset-md-4">
+        <h1>Check Your Flight Details:</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 offset-md-4">
+        <form [formGroup]="flightForm">
+          <div class="form-group">
+            <label>Flight Id : </label>
+            <input
+              class="form-control"
+              type="number"
+              name="id"
+              formControlName="id"
+            />
+          </div>
+          
+          <button type="button" (click)="submit()" class="btn-block btn btn-success">
+            Submit
+          </button>
+        </form>
+      </div>
+  
+      <div class="col-md-4 offset-md-4 mt-4" *ngIf="searchData">
+        <div class="card shadow">
+          <div class="card-body">
+            <div>
+              <span>Flight Name : {{searchData.flightName}}</span>
+            </div>
+           
+            <div>
+              <span>Flight Name : {{searchData.flightDate}}</span>
+            </div>
+            <div>
+              <span>Flight id : {{searchData.id}}</span>
+            </div>
+            <div>
+              <span>Flight Time : {{searchData.flightTime}}</span>
+            </div>
+            <div>
+              <span>Flight origin : {{searchData.origin}}</span>
+            </div>
+            <div>
+              <span>Flight destination : {{searchData.destination}}</span>
+            </div>
+          </div>
+        </div>
+  
+        
+      </div>
+  
+      <div class="col-md-4 offset-md-4 mt-3">
+        <button class="btn btn-primary btn-block" (click)="goToHome()">
+          Home
+        </button>
+      </div>
+    </div>
+  
+  </div>
+
+
+  
+  
+  

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <form class="searchdiv" method="post">
+    <input #origin type="text" placeholder="Enter Origin" class="input" name="origin" id="origin">
+    <!-- *ngModel -->
+    <input #destination type="text" placeholder="Enter Destination" class="input" name="destination" id="destination">
+    <input type="submit" value="Search" class="button" (click)="searchFlight(origin.value,destination.value)">
+    <input type="submit" value="Reset" class="button" (click)="reset()">
+</form>
+<br>
+
+<div class="container">
+              
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Flight Id</th>
+        <th>flightName</th>
+        <th>flightDate</th>
+        <th>flightTime</th>
+        <th>origin</th>
+        <th>destination</th>
+        <th>businessClassFare</th>
+        <th>economyClassFare</th>
+        <th>BookFlight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--rendering dynamic data thrg binding-->
+      <tr *ngFor="let book of flights">
+        <td>{{book.id}}</td>
+        <td>{{book.flightName}}</td>
+        <td>{{book.flightDate}}</td>
+        <td>{{book.flightTime}}</td>
+        <td>{{book.origin}}</td>
+        <td>{{book.destination}}</td>
+        <td>{{book.businessClassFare}}</td>
+        <td>{{book.economyClassFare}}</td>
+        <!--<td><a href="http://localhost:8082/patient/add/{{book.id}}" routerLink="/register/{{book.id}}" ><button>Book</button></a></td>-->
+        
+        <td><a href="Javascript.void(0)" routerLink="/add/{{book.id}}" class="card-link"><button>Book</button></a></td>
+        
+        
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+<br>
+<div class="container">
+  <a href="http://localhost:4200/Home"><button  type="button" class="btn btn-success btn-lg btn-block" >Back To Dashboard</button></a>
+  
+</div>
+</body>
+</html>

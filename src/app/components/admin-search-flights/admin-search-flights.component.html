@@ -1,0 +1,45 @@
+<form class="searchdiv" method="post">
+    <input #origin type="text" placeholder="Enter Origin" class="input" name="origin" id="origin">
+    <!-- *ngModel -->
+    <input #destination type="text" placeholder="Enter Destination" class="input" name="destination" id="destination">
+    <input type="submit" value="Search" class="button" (click)="searchFlight(origin.value,destination.value)">
+    <input type="submit" value="Reset" class="button" (click)="reset()">
+</form>
+<br>
+
+<div class="container">
+    <table>
+        <tr>
+            <th>Flight Id</th>
+            <th>Flight Name</th>
+            <th>Flight Date</th>
+            <th>Flight Time</th>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>Business Class Fare</th>
+            <th>Economy Class Fare</th>
+            <th>Delete Train</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let flight of flights">
+            <td>{{flight.id}}</td>
+            <td>{{flight.flightName}}</td>
+            <td>{{flight.flightDate}}</td>
+            <td>{{flight.flightTime}}</td>
+            <td>{{flight.origin}}</td>
+            <td>{{flight.destination}}</td>
+            <td>{{flight.businessClassFare}}</td>
+            <td>{{flight.economyClassFare}}</td>
+            <td><input type="button" value="Delete Flight" class="button" (click)="deleteFlight(flight.id)"></td>
+            <!--<td>
+                <button (click)="updateFlight(flight.id)" class="btn btn-info">Update</button>
+            </td>-->
+            <td>
+                <button class="btn btn-success" type="button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+                        (click)="onEditDep(staff)"><mat-icon>edit</mat-icon></button>
+            </td>
+        </tr>
+    </table>
+</div>
+<br>
+

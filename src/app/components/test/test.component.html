@@ -1,0 +1,76 @@
+<app-navbar></app-navbar>
+<div>
+    <input type="text" [(ngModel)]="message">
+    {{message}}
+</div>
+<div>
+    <table class="table">
+        <thead>
+          <tr>
+            
+            <th>classs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--rendering dynamic data thrg binding-->
+          <tr *ngFor="let book of products">
+            <td>{{book.name}}</td>
+          </tr>
+          
+        </tbody>
+      </table>
+</div>
+
+<!-----------------------using http client and url--------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!------------USing pipes------------->
+<div style="text-align: center">
+ <h1> {{pipess| titlecase}}</h1>
+ <h2> {{amount | currency:'INR'}}</h2>
+</div>>
+<div style="text-align: center" class="alert alert-success">
+  <p>{{users}} | json</p>
+</div>
+<!------------USing pipes------------->
+<div class="container">            
+  <table class="table">
+    <thead>
+      <tr *ngIf="users.length>0">
+        <th>id</th>
+        <th>name</th>
+        <th>username</th>
+        <th>email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+<!--
+
+  <td>{{user.id}}</td>  
+  //--instead of use--//
+  <div [ngSwitch]="user.email">
+          <span *ngSwitch="0">NgSWitchh</span>
+
+        </div>-->
+

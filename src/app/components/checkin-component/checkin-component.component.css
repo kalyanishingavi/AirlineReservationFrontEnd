@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Nunito");
+/*import "~nouislider/distribute/nouislider.min.css";*/
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+body {
+  background-image: url("https://assets.wallpapersin4k.org/uploads/2017/04/Wallpaper-Clouds-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  font-family: 'Nunito', sans-serif;
+}

@@ -1,0 +1,21 @@
+<p>login-component works!</p>
+
+<div>
+
+    
+    <h1 class="login"> Login </h1>  
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+        <div class="container"> 
+            <label>User Name : </label> 
+            <input type="text" placeholder="Enter Username" ngModel name="username" id="username" required>
+            <label>Password : </label> 
+            <input type="password" placeholder="Enter Password" ngModel name="password" id="password" required>
+            <input type="submit" value="Login" class="loginBtn">
+        </div> 
+    </form>   
+
+        
+    </div>
+    
+    
+    <footer><p>©Copyright: Online Ticket Reservation System</p></footer>

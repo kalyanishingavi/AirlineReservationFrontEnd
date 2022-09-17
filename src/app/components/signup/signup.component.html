@@ -1,0 +1,53 @@
+<section >
+    <form action="action_page.php" method="post" (submit)="userRegister()"[formGroup]='myForm'>
+        <div class="imgcontainer">
+          <img src="../assets/images/img_avatar2.png" >
+        </div>
+      
+        <div class="container">
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username" formControlName="username">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput" class="form-label">Password</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" formControlName="password">
+      </div>
+      
+      <div class="mb-3">
+        <label for="exampleFormControlInput" class="form-label">Gender</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" formControlName="gender">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleFormControlInput" class="form-label">Email</label>
+      <input type="text" class="form-control" id="firstName" name="firstName" formControlName="email">
+  </div>
+          
+<div class="mb-3">
+      <label for="exampleFormControlInput" class="form-label">Phone</label>
+      <input type="text" class="form-control" id="firstName" name="firstName" formControlName="phone">
+  </div>
+          
+  <div class="mb-3">
+    <label for="exampleFormControlInput" class="form-label">Role</label>
+    <input type="text" class="form-control" id="firstName" name="firstName" formControlName="role">
+</div>
+          
+
+          
+      
+          <button type="submit">SignUp</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+</section>
