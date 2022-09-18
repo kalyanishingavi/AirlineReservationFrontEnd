@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BookTickets } from '../models/booktickets.model';
@@ -13,6 +13,9 @@ export class BookingService {
   constructor(private http:HttpClient) { }
 
   getAllBookings(){
+    let username='Mathew'
+    let password='123'
+    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
     return this.http.get("http://localhost:8082/book");
   }
 

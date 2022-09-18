@@ -27,6 +27,9 @@ import { UpdateFlightComponent } from './components/update-flight/update-flight.
 import { AuthGuardComponent } from './components/auth-guard/auth-guard.component';
 import { AllowedAdminComponent } from './components/allowed-admin/allowed-admin.component';
 import { AlloweduserComponent } from './components/alloweduser/alloweduser.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -58,6 +61,9 @@ import { AlloweduserComponent } from './components/alloweduser/alloweduser.compo
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    Ng2SearchPipeModule,
+    Ng2OrderModule,
+    NgxPaginationModule,
     ReactiveFormsModule
   ],
   

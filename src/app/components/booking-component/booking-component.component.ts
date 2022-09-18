@@ -11,7 +11,9 @@ export class BookingComponentComponent implements OnInit {
 
   books:any;
   searchClass:string="";
-
+  firstName:any;
+  p: number=1;
+  bookingId:any;
   constructor(private bookingService: BookingService) { }
 
   ngOnInit(): void {
@@ -19,5 +21,24 @@ export class BookingComponentComponent implements OnInit {
     .subscribe(data=>(this.books=data));
     
   }
+  Search(){
+    if (this.firstName == ""){
+      this.ngOnInit();
+    }else{
+      this.books = this.books.filter(res=>{
+        return res.firstName.toLocaleLowerCase().match(this.firstName.toLocaleLowerCase());
+      }
+        )
+    }
+  }
+
+  key: string = 'bookingId';
+  reverse: boolean = false;
+  sort(key){
+    this.key = key;
+    this.reverse = !this.reverse;
+  }
+
+  
 
 }

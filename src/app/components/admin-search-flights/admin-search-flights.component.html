@@ -21,7 +21,7 @@
             <th>Delete Train</th>
             <th>Actions</th>
         </tr>
-        <tr *ngFor="let flight of flights">
+        <tr *ngFor="let flight of flights | paginate: {itemsPerPage:3, currentPage:p};">
             <td>{{flight.id}}</td>
             <td>{{flight.flightName}}</td>
             <td>{{flight.flightDate}}</td>
@@ -39,7 +39,14 @@
                         (click)="onEditDep(staff)"><mat-icon>edit</mat-icon></button>
             </td>-->
         </tr>
+
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        <br>
+        
     </table>
+    
 </div>
 <br>
-<a href="http://localhost:4200/allow"><button  type="button" class="btn btn-success btn-lg btn-block" >Back To Dashboard</button></a>
+<!--<a href="http://localhost:4200/allow"><button  type="button" class="btn btn-success btn-lg btn-block" >Back To Dashboard</button></a>-->
+<a href="http://localhost:4200/allow"><input type="submit" value="Back to Dashboard" class="button"></a>
+<a href="http://localhost:4200/search"><input type="submit" value="Add Flights" class="button"></a>

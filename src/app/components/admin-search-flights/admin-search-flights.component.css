@@ -28,6 +28,7 @@
     text-align: center;
   }
   li a {
+    background-color: #03593e;
     color: white;
     text-decoration: none;
   }
@@ -39,6 +40,9 @@
   }
   
   table {
+    background-color: #101011;
+    opacity: 0.5;
+    color: white;
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;

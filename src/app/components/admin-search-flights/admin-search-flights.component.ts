@@ -16,7 +16,8 @@ export class AdminSearchFlightsComponent implements OnInit {
   flights: any;
   origin: any;
   destination: any;
-  formValue!: FormGroup
+  formValue!: FormGroup;
+  p: number=1;
   constructor(
     private service:AdminSearchService,
     private router: Router
