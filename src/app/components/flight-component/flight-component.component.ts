@@ -16,7 +16,7 @@ export class FlightComponentComponent implements OnInit {
   origin: any;
   destination: any;
   did: number;
-
+  p: number=1;
   flight: Flights[];
 
   constructor(private flightSearchService: FlightSearchService, private testService: TestService ) { }

@@ -13,7 +13,7 @@ export class FlightSearchService {
   constructor(private http:HttpClient) { }
 
   getAllFlights(){
-    return this.http.get("http://localhost:8810/book/flightapi");
+    return this.http.get("http://localhost:8081/search");
   }
 
   public searchFlightByOriginAndDestination(origin: any, destination: any) {

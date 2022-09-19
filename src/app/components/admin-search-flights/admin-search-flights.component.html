@@ -30,21 +30,23 @@
             <td>{{flight.destination}}</td>
             <td>{{flight.businessClassFare}}</td>
             <td>{{flight.economyClassFare}}</td>
-            <td><input type="button" value="Delete Flight" class="button" (click)="deleteFlight(flight.id)"></td>
+            <td><input type="button" value="Delete" class="button" (click)="deleteFlight(flight.id)"></td>
             <td>
-                <button (click)="updateFlight(flight.id)" class="btn btn-info">Update</button>
+                <input type="button" value="Update" class="button" (click)="updateFlight(flight.id)">
+                <!--<button (click)="updateFlight(flight.id)" class="btn btn-info">Update</button>-->
             </td>
             <!--<td>
                 <button class="btn btn-success" type="button" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" 
                         (click)="onEditDep(staff)"><mat-icon>edit</mat-icon></button>
             </td>-->
         </tr>
-
-        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        
         <br>
         
     </table>
-    
+    <div  class="button">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
 </div>
 <br>
 <!--<a href="http://localhost:4200/allow"><button  type="button" class="btn btn-success btn-lg btn-block" >Back To Dashboard</button></a>-->

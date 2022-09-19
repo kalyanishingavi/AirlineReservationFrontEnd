@@ -1,12 +1,14 @@
-
-<h1>Booking Details Of User</h1>
+<div style="text-align: center">
+<h1><b>Booking Details Of User</b></h1>
+</div>
 <form class="searchdiv" method="post">
 <nav class="navbar">
-  <input class="form-control" type="text" name="firstName" [(ngModel)]="firstName" (ngModelChange)="Search()"
+  <input  class="form-control" type="text" name="firstName" [(ngModel)]="firstName" (ngModelChange)="Search()"
   placeholder="Enter First Name To Search">
-
+  
 </nav>
 </form>
+<br>
 <div class="container">
   <table>
       <tr>
@@ -27,8 +29,11 @@
         <td>{{book?.noOfSeats}}</td>
         <td>{{book?.classs}}</td>
       </tr>
-      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+     
   </table>
+  <div  class="button">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
 </div>
 <br>
 <!--<a href="http://localhost:4200/allow"><button  type="button" class="btn btn-success btn-lg btn-block" >Back To Dashboard</button></a>-->

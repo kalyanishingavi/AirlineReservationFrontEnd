@@ -1,8 +1,22 @@
-<div class="col-sm-3" align="center" style="border: darkslategray;">
+<!--<div class="col-sm-3" align="center" style="border: darkslategray;">
     <section style="background-color: lightgreen;" >
-    <h1>Login</h1>
+    <h1>Login</h1>-->
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="/assets/images/download(3).jpg" id="icon" alt="User Icon" />
+    </div>
     
-    <span *ngIf="errorMsg"> {{errorMsg}}</span>
+    <!--<span *ngIf="errorMsg"> {{errorMsg}}</span>
     <form (submit)="onFormSubmit()" [formGroup]="loginForm">
         <label>Username: </label>
         <input type="text" name="username" required formControlName="username">
@@ -15,4 +29,22 @@
         <a href="http://localhost:4200/Home"><button type="button" class="cancelbtn">Cancel</button></a>
     </form>
     </section>
-    </div>
+    </div>-->
+    <b>User Login</b>
+    <span *ngIf="errorMsg"> {{errorMsg}}</span>
+    <form (submit)="onFormSubmit()" [formGroup]="loginForm">
+        <!--<label>Username: </label>-->
+        <input type="text" id="username" class="fadeIn second" name="username" required formControlName="username" placeholder="username">
+        <!--<input type="text" name="username" required formControlName="username"  class="fadeIn second">-->
+        <br/><br/>
+        <!--<label>Password: </label>-->
+        <!--<input type="password" name="password" required formControlName="password" class="fadeIn third">-->
+        
+        <input type="password" id="password" class="fadeIn third" name="password" required formControlName="password"  placeholder="password">
+        <br/><br/>
+        <a href="http://localhost:4200/allowuser"><input type="submit" value="LOGIN"  class="fadeIn fourth"></a>
+        <a href="http://localhost:4200/Home"><input type="button" value="Cancel" class="cancelbtn" class="fadeIn fifth"></a>
+        <!--<a href="http://localhost:4200/Home"><button  type="button" class="cancelbtn">Cancel</button></a>-->
+    </form>
+   <!-- </section>-->
+    </div>

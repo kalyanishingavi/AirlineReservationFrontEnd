@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    
+    </style>
 </head>
 <body>
 
@@ -21,23 +25,23 @@
 
 <div class="container">
               
-  <table class="table">
-    <thead>
+  <table><!--class="table">-->
+    <!--<thead>-->
       <tr>
         <th>Flight Id</th>
-        <th>flightName</th>
-        <th>flightDate</th>
-        <th>flightTime</th>
-        <th>origin</th>
-        <th>destination</th>
-        <th>businessClassFare</th>
-        <th>economyClassFare</th>
-        <th>BookFlight</th>
+        <th>Flight Name</th>
+        <th>Flight Date</th>
+        <th>Flight Time</th>
+        <th>Origin</th>
+        <th>Destination</th>
+        <th>Business Class Fare</th>
+        <th>Economy Class Fare</th>
+        <th>Book Flight</th>
       </tr>
-    </thead>
-    <tbody>
+    <!--</thead>-->
+    <!--<tbody>-->
       <!--rendering dynamic data thrg binding-->
-      <tr *ngFor="let book of flights">
+      <tr *ngFor="let book of flights | paginate: {itemsPerPage:3, currentPage:p};">
         <td>{{book.id}}</td>
         <td>{{book.flightName}}</td>
         <td>{{book.flightDate}}</td>
@@ -47,18 +51,21 @@
         <td>{{book.businessClassFare}}</td>
         <td>{{book.economyClassFare}}</td>
         <!--<td><a href="http://localhost:8082/patient/add/{{book.id}}" routerLink="/register/{{book.id}}" ><button>Book</button></a></td>-->
-        
-        <td><a href="Javascript.void(0)" routerLink="/add/{{book.id}}" class="card-link"><button>Book</button></a></td>
-        
-        
-      </tr>
       
-    </tbody>
+        <td><a href="Javascript.void(0)" routerLink="/add/{{book.id}}" ><button class="button">Book</button></a></td>
+        
+        
+     </tr>
+    
+    <!--</tbody>-->
   </table>
+  <div  class="button">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
 </div>
 <br>
 <div class="container">
-  <a href="http://localhost:4200/allowuser"><button  type="button" class="btn btn-success btn-lg btn-block" >Back To Dashboard</button></a>
+  <a href="http://localhost:4200/allowuser"><button  class="button" >Back To Dashboard</button></a>
   
 </div>
 </body>

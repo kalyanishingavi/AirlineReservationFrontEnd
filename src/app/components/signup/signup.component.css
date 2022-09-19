@@ -1,6 +1,12 @@
+body { padding-top:30px; }
+.form-control { margin-bottom: 10px; }
+
+
+
 /* Bordered form */
 form {
     border: 3px solid #f1f1f1;
+    
   }
   
   /* Full-width inputs */
@@ -15,13 +21,14 @@ form {
   
   /* Set a style for all buttons */
   button {
-    background-color: #04AA6D;
+    background-color: #0a0c0b;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
+    opacity: 0.9;
   }
   
   /* Add a hover effect for buttons */
@@ -50,7 +57,24 @@ form {
   
   /* Add padding to containers */
   .container {
-    padding: 16px;
+    padding: 20px;
+    
+
+
+    font-family: arial;
+  font-size: 15px;
+  margin: auto;
+  width: 450px;
+  height: 550px;
+  
+  /* Setup */
+  position: relative;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
   }
   
   /* The "Forgot password" text */
@@ -65,7 +89,5 @@ form {
       display: block;
       float: none;
     }
-    .cancelbtn {
-      width: 100%;
-    }
-  }
+  
+}

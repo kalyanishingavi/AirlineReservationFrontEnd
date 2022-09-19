@@ -60,3 +60,13 @@ span.req {
     color:maroon;
     font-size: 112%;
 }
+
+.button {
+    background-color: #555555;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }

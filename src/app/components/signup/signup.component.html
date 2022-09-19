@@ -1,25 +1,34 @@
-<section >
-    <form action="action_page.php" method="post" (submit)="userRegister()"[formGroup]='myForm'>
-        <div class="imgcontainer">
-          <img src="../assets/images/img_avatar2.png" >
-        </div>
-      
-        <div class="container">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-          <div class="mb-3">
+
+<section style="text-align:center" >
+
+  <h2><legend><a href="http://www.jquery2dotnet.com"><i class="glyphicon glyphicon-globe"></i></a> Sign up!</legend></h2>
+    <form action="#" method="post" (submit)="userRegister()"[formGroup]='myForm'>
+        <!--<div class="imgcontainer">
+          <img src="../assets/images/img_avatar2.png" >
+        </div>-->
+
+      <div class="container" style="text-align:center">
+        <div class="col-xs-12 col-sm-12 col-md-20 well well-sm"  >
+          <div class="row" >
+          <div class="col-xs-6 col-md-6">
             <label for="exampleFormControlInput" class="form-label">Username</label>
             <input type="text" class="form-control" id="username" name="username" formControlName="username">
         </div>
 
-        <div class="mb-3">
+        <div class="col-xs-6 col-md-6">
           <label for="exampleFormControlInput" class="form-label">Password</label>
-          <input type="text" class="form-control" id="firstName" name="firstName" formControlName="password">
+          <input type="password" class="form-control" id="firstName" name="firstName" formControlName="password">
       </div>
-      
+    </div>
       <div class="mb-3">
         <label for="exampleFormControlInput" class="form-label">Gender</label>
         <input type="text" class="form-control" id="firstName" name="firstName" formControlName="gender">
     </div>
+
 
     <div class="mb-3">
       <label for="exampleFormControlInput" class="form-label">Email</label>
@@ -30,8 +39,11 @@
       <label for="exampleFormControlInput" class="form-label">Phone</label>
       <input type="text" class="form-control" id="firstName" name="firstName" formControlName="phone">
   </div>
+</div>
+
+
           
-  <!--<div class="mb-3">
+ <!-- <div class="mb-3">
     <label for="exampleFormControlInput" class="form-label">Role</label>
     <input type="text" class="form-control" id="firstName" name="firstName" formControlName="role">
 </div>-->
@@ -39,16 +51,30 @@
 
           
       
-          <button type="submit">SignUp</button>
-          <label>
+          <!--<button type="submit">SignUp</button>-->
+          <br />
+            <br />
+            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                Sign up</button>
+
+                <a href="http://localhost:4200/Home"><button class="btn btn-lg btn-primary btn-block" class="btn btn-lg btn-primary btn-block" type="button">
+                 Cancel</button></a>
+
+                 <a href="http://localhost:4200/login"><button class="btn btn-lg btn-primary btn-block" type="button">
+                 Login</button>
+
+                
+         <!-- <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
+          </label>-->
+       <!-- </div>-->
       
-        <div class="container" style="background-color:#f1f1f1">
-          <a href="http://localhost:4200/Home"><button type="button" class="cancelbtn">Cancel</button></a>
-          <a href="http://localhost:4200/login"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+        <!--<div class="container" style="background-color:#f1f1f1">-->
+          <!--<a href="http://localhost:4200/Home"><button type="button" class="cancelbtn">Cancel</button></a>
+          <a href="http://localhost:4200/login"><span class="glyphicon glyphicon-log-in"></span> Login</a>-->
+
+
           
-        </div>
-      </form>
-</section>
+        <!--</div>-->
+      <!--</form>-->
+<!--</section>-->

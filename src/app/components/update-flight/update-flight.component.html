@@ -1,77 +1,88 @@
-<p>update-flight works!</p>
-<section style="background-color: rgb(196, 255, 200);" >
-    <div class="container col-md-6" style="text-align: center">
-        <h1 style="color:rgb(4, 68, 9);">Add Flights</h1>
-    <form (submit)="onEditDep(staff)"[formGroup]='myForm'>
-        <div class="mb-3">
-            <label for="exampleFormControlInput" class="form-label">FlightName</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" formControlName="flightName">
-        </div>
-    <div class="mb-3">
-        <label for="exampleFormControlInput" class="form-label">FlightDate</label>
-        <input type="text" class="form-control" id="firstName" name="firstName" formControlName="flightDate">
-    </div>
-    
-    <div class="mb-3">
-        <label for="exampleFormControlInput" class="form-label">FlightTime</label>
-        <input type="text" class="form-control" id="firstName" name="firstName" formControlName="flightTime">
-    </div>
-    
-    <div class="mb-3">
-        <label for="exampleFormControlInput" class="form-label">Origin</label>
-        <input type="text" class="form-control" id="firstName" name="firstName" formControlName="origin">
-    </div>
-    
-    
-    <div class="mb-3">
-        <label for="exampleFormControlInput" class="form-label">Destination</label>
-        <input type="text" class="form-control" id="firstName" name="firstName" formControlName="destination">
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlInput" class="form-label">BusinessClassFare</label>
-        <input type="text" class="form-control" id="firstName" name="firstName" formControlName="businessClassFare">
-    </div>
-    <div class="mb-3">
-        <label for="exampleFormControlInput" class="form-label">EconomyClassFare</label>
-        <input type="text" class="form-control" id="firstName" name="firstName" formControlName="economyClassFare">
-    </div>
-    
-    <!--<div class="mb-3">
-        <label for="exampleFormControlInput" class="form-label">Gender</label>
-    
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="female" value="female"formControlName="gender">
-            <label class="form-check-label" for="exampleRadios1">
-                Male
-            </label>
-        </div>
-    
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="male" value="male"formControlName="gender">
-            <label class="form-check-label" for="exampleRadios1">
-                Female
-            </label>
-        </div>
-    </div>-->
-    <button type="submit" class="btn btn-success">AddFlight</button>
-    
-    </form>
-    </div>
-    </section>
-    <section>
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <section style="background-color: rgb(196, 255, 200);">
+                <div class="container col-md-6" style="text-align: center">
+                    <h1 style="color:rgb(4, 68, 9);">Add Flights</h1>
+                    <form [formGroup]='myForm'>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput" class="form-label">FlightName</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                formControlName="flightName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput" class="form-label">FlightDate</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                formControlName="flightDate">
+                        </div>
 
-</html>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput" class="form-label">FlightTime</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                formControlName="flightTime">
+                        </div>
 
-    </section>
-    
-    
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput" class="form-label">Origin</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                formControlName="origin">
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput" class="form-label">Destination</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                formControlName="destination">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput" class="form-label">BusinessClassFare</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                formControlName="businessClassFare">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput" class="form-label">EconomyClassFare</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                formControlName="economyClassFare">
+                        </div>
+
+                        <!--<div class="mb-3">
+                    <label for="exampleFormControlInput" class="form-label">Gender</label>
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="female"formControlName="gender">
+                        <label class="form-check-label" for="exampleRadios1">
+                            Male
+                        </label>
+                    </div>
+                
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="male"formControlName="gender">
+                        <label class="form-check-label" for="exampleRadios1">
+                            Female
+                        </label>
+                    </div>
+                </div>-->
+                        <button type="submit" class="btn btn-success" (click)="updateFlight()">Update Flight</button>
+
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<section>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
+    </html>
+
+</section>
